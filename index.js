@@ -1,4 +1,4 @@
-// 1. Импорт модулей
+
 import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   res.send({ message: 'Server is running' });
 });
 
-// 3. Обработка событий подключения
+
 mongoose.connection.on('error', (error) => {
   console.error('Ошибка MongoDB:', error.message);
 });
